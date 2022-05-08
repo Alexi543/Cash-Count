@@ -1,0 +1,39 @@
+* {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center
+}
+
+.title {
+    margin-bottom: 30px;
+    margin-top: 30px;
+    font-size: 30px;
+}
+
+.output {
+    background-color: rgb(236, 228, 228);
+    padding: 10px;
+    width: 150px;
+    margin-inline: auto;
+    margin-bottom: 30px;
+    border-style: solid;
+    border-color: black;
+}
+
+.settings {
+    background-color: rgb(236, 228, 228);
+    padding: 15px;
+    width: 200px;
+    margin-inline: auto;
+    margin-bottom: 30px;
+    border-style: solid;
+    border-color: black;
+}
+
+#counter {
+    font-size: 30px;
+    margin-bottom: -10px;
+}
+
+#salary {
+    margin-bottom: 10px;
+}

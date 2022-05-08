@@ -4,13 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript Web Template</title>
+    <title>Cash Counter</title>
     <link rel="stylesheet" href="/Style/style.css">
 </head>
 <body>
+    <div class="window">
+        <h1 class="title"><strong>Cach Counter</strong></h1>
     
+        <section class="output">
+            <h2 id="counter">0:00</h2>
+            <h3 id="cash">0.00 $</h3>
+        </section>
+        
+        <section class="settings">
+            <input type="text" id="salary" placeholder="Salary (per hour)">
+            
+            <br>
 
-    <script src="/_Tools/Html/importHtml.js"></script>
+            <button id="start">Start</button>
+            <button id="pause">Pause</button>
+            <button id="stop">Stop</button>
+        </section>
+    </div>
+
     <script type="module" src="/JS/index.js"></script>
 </body>
 </html>
