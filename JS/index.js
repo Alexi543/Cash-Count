@@ -9,6 +9,7 @@ const startCount = (amount) => {
     let cashPerSec = (amount / 60) / 60;
     let sec = 0;
     let min = 0;
+    let hour = 0;
     let total = 0;
     let pause = false
 
@@ -18,12 +19,7 @@ const startCount = (amount) => {
                 if (button.id === "stop") clearInterval(timer);
                 else if (button.id === "pause") {
                     pause =! pause;
-
-                    if (pause === true) {
-                        button.textContent = "Resume";
-                    } else {
-                        button.textContent = "Pause";
-                    }
+                    (pause === true) ? button.textContent = "Resume" : button.textContent = "Pause";
                 }
             })
         })
@@ -35,16 +31,22 @@ const startCount = (amount) => {
                 sec = 0
                 min++;
             }
+
+            if (min === 60) {
+                sec = 0;
+                min = 0;
+                hour++;
+            }
             
             total += cashPerSec;
 
-            let displaySec;
-            let displayMin;
+            let displaySec, displayMin, displayHour;
 
             (sec < 10) ? displaySec = `0${sec}` : displaySec = sec;
             (min < 10) ? displayMin = `0${min}` : displayMin = min;
+            (hour < 10) ? displayHour = `0${hour}` : displayHour = displayHour;
 
-            counter.textContent = `${displayMin}:${displaySec}`;
+            counter.textContent = `${displayHour}:${displayMin}:${displaySec}`;
             cash.textContent = `${round(total)} $`;
         }
     }, 1000)
